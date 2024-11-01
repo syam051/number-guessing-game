@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Rules Modal -->
+    <div id="rules-modal" class="modal">
+        <div class="modal-content">
+            <h2>Game Rules</h2>
+            <p>Welcome to the Number Guessing Game!</p>
+            <p>Here are the rules:</p>
+            <ul>
+                <li>A random number between 1 and 100 is displayed.</li>
+                <li>Your task is to guess whether the next number will be higher or lower.</li>
+                <li>If you guess correctly, you earn a point. If not, you lose a point.</li>
+                <li>Try to score as high as possible!</li>
+            </ul>
+            <button onclick="startGame()">Start Game</button>
+        </div>
+    </div>
+
+    <!-- Game Container -->
+    <div class="container">
+        <h1>Guess the Next Number!</h1>
+        <div class="game">
+            <p>Current Number: <span id="current-number"></span></p>
+            <p>Your Score: <span id="score">0</span></p>
+            <div class="buttons">
+                <button onclick="guess('higher')">Higher</button>
+                <button onclick="guess('lower')">Lower</button>
+            </div>
+            <p id="message"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
